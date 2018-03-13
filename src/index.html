@@ -4,9 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <title>SUDOKU SOLVER FOR THE YEAR 3000</title>
   </head>
+  <header>
+  </header>
   <body>
     <table id="sudoku">
-      <tr>
+      <tr id="ARow">
         <td id="AJ"> 8 </td>
         <td id="AK"> 3 </td>
         <td id="AL"> 7 </td>
@@ -17,7 +19,7 @@
         <td id="AQ"> 1 </td>
         <td id="AR"> 6 </td>
       </tr>
-      <tr>
+      <tr id="BRow">
         <td id="BJ"> 9 </td>
         <td id="BK"> 2 </td>
         <td id="BL"> 1 </td>
@@ -28,7 +30,7 @@
         <td id="BQ"> 3 </td>
         <td id="BR"> 4 </td>
       </tr>
-      <tr>
+      <tr id="CRow">
         <td id="CJ"> 5 </td>
         <td id="CK"> 4 </td>
         <td id="CL"> 6 </td>
@@ -39,7 +41,7 @@
         <td id="CQ"> 2 </td>
         <td id="CR"> 7 </td>
       </tr>
-      <tr>
+      <tr id="DRow">
         <td id="DJ"> 6 </td>
         <td id="DK"> 5 </td>
         <td id="DL"> 2 </td>
@@ -50,7 +52,7 @@
         <td id="DQ"> 9 </td>
         <td id="DR"> 3 </td>
       </tr>
-      <tr>
+      <tr id="ERow">
         <td id="EJ"> 1 </td>
         <td id="EK"> 8 </td>
         <td id="EL"> 9 </td>
@@ -61,7 +63,7 @@
         <td id="EQ"> 4 </td>
         <td id="ER"> 5 </td>
       </tr>
-      <tr>
+      <tr id="FRow">
         <td id="FJ"> 3 </td>
         <td id="FK"> 7 </td>
         <td id="FL"> 4 </td>
@@ -72,7 +74,7 @@
         <td id="FQ"> 6 </td>
         <td id="FR"> 8 </td>
       </tr>
-      <tr>
+      <tr id="GRow">
         <td id="GJ"> 7 </td>
         <td id="GK"> 6 </td>
         <td id="GL"> 5 </td>
@@ -83,7 +85,7 @@
         <td id="GQ"> 8 </td>
         <td id="GR"> 9 </td>
       </tr>
-      <tr>
+      <tr id="HRow">
         <td id="HJ"> 2 </td>
         <td id="HK"> 9 </td>
         <td id="HL"> 8 </td>
@@ -94,7 +96,7 @@
         <td id="HQ"> 5 </td>
         <td id="HR"> 1 </td>
       </tr>
-      <tr>
+      <tr id="IRow">
         <td id="IJ"> 4 </td>
         <td id="IK"> 1 </td>
         <td id="IL"> 3 </td>
@@ -106,5 +108,7 @@
         <td id="IR"> 2 </td>
       </tr>
     </table>
+    <button type="submit">SOLVE IT DIDDY.</button>
+    <div id="results"></div>
   </body>
 </html>

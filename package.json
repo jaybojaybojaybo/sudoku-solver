@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode development",
     "start": "webpack-dev-server --open",
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "lint": "eslint ./*.js"
   },
   "keywords": [],
   "author": "",
