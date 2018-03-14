@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers');
 
 
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-  contentBase: './dist'
+    contentBase: './dist'
   },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
@@ -21,7 +22,8 @@ module.exports = {
       title: 'JSTemplate',
       template: './src/index.html',
       inject: 'body'
-    })
+    }),
+    
   ],
   module: {
     rules: [
@@ -32,6 +34,17 @@ module.exports = {
           /spec/
         ],
         loader: "eslint-loader"
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
       },
       {
         test: /\.css$/,

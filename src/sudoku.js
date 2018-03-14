@@ -1,22 +1,24 @@
-function sudokify(myTableArray) {
-  let answer = [
-    1,1,1,1,1,1,1,1,1,
-    2,2,2,2,2,2,2,2,2,
-    3,3,3,3,3,3,3,3,3,
-    4,4,4,4,4,4,4,4,4,
-    5,5,5,5,5,5,5,5,5,
-    6,6,6,6,6,6,6,6,6,
-    7,7,7,7,7,7,7,7,7,
-    8,8,8,8,8,8,8,8,8,
-    9,9,9,9,9,9,9,9,9];
-  let output = myTableArray.sort();
-  let wrong = "Sudoku is incorrect.";
-  for (let i = 1; i < 28; i++)
-    if (output != answer)
-    {
-      return wrong;
-    }
-  return output;
-}
+export class SudokuBoard{
+  constructor(sudokuArray){
+    this.sudokuArray = sudokuArray;
+  }
 
-exports.sudokifyModule = sudokify;
+  sudokify(userBoard) {
+    this.sudokuArray[0]
+    const answer = [1,2,3,4,5,6,7,8,9];
+    let myUserBoard = new Array(userBoard);
+    let newarray = myUserBoard[0];
+    console.log(newarray);
+    let mySudokuBoard = [];
+    for(let i = 0; i <= 8; i++){
+      let output = new Array(userBoard[i]);
+      if(output === answer){
+        let wrong = "Try Again!";
+        return wrong;
+      } else {
+        mySudokuBoard.push(output[0]);
+      }
+    }
+    return mySudokuBoard;
+  }
+}
