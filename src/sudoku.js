@@ -18,11 +18,17 @@ export class SudokuBoard {
       }
       checkedArrays.push(checkedArray);
     }
-    console.log(checkedArrays)
     return checkedArrays;
   }
 
   sudokufy() {
-
+    let verts = [[],[],[],[],[],[],[],[],[]];
+    for(let i = 0; i < this.sudokuArray.length; i++){
+      for(let j = 0; j < this.sudokuArray[i].length; j++){
+        verts[i].push(this.sudokuArray[j][i]);
+        console.log(verts);
+      }
+    }
+    return verts;
   }
 }
