@@ -1,6 +1,6 @@
-import './styles.css';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 // const SudokuBoard = require('./../src/sudoku.js').SudokuBoardModule;
 //
 // $(document).ready(function() {

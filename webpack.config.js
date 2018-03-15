@@ -1,9 +1,8 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers');
-
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers')
 
 module.exports = {
   entry: './src/main.js',
@@ -22,8 +21,8 @@ module.exports = {
       title: 'JSTemplate',
       template: './src/index.html',
       inject: 'body'
-    }),
-    
+    })
+
   ],
   module: {
     rules: [
@@ -33,7 +32,7 @@ module.exports = {
           /node_modules/,
           /spec/
         ],
-        loader: "eslint-loader"
+        loader: 'eslint-loader'
       },
       {
         test: /\.js$/,
@@ -41,7 +40,7 @@ module.exports = {
           /node_modules/,
           /spec/
         ],
-        loader: "babel-loader",
+        loader: 'babel-loader',
         options: {
           presets: ['es2015']
         }
@@ -55,4 +54,4 @@ module.exports = {
       }
     ]
   }
-};
+}

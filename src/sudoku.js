@@ -1,24 +1,28 @@
-export class SudokuBoard{
-  constructor(sudokuArray){
+export class SudokuBoard {
+  constructor (sudokuArray) {
     this.sudokuArray = sudokuArray;
+    this.answer = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
 
-  sudokify(userBoard) {
-    this.sudokuArray[0]
-    const answer = [1,2,3,4,5,6,7,8,9];
-    let myUserBoard = new Array(userBoard);
-    let newarray = myUserBoard[0];
-    console.log(newarray);
-    let mySudokuBoard = [];
-    for(let i = 0; i <= 8; i++){
-      let output = new Array(userBoard[i]);
-      if(output === answer){
-        let wrong = "Try Again!";
-        return wrong;
-      } else {
-        mySudokuBoard.push(output[0]);
+  sudokuCheck() {
+    let checkedArrays = [];
+    for(let i = 0; i < this.sudokuArray.length; i++){
+      let sortedArray = this.sudokuArray[i].sort();
+      let checkedArray = [];
+      for(let j = 0; j < sortedArray.length; j++){
+        if(sortedArray[j] === this.answer[j]){
+          checkedArray.push(this.sudokuArray[i][j]);
+        } else {
+          return "Hear my cries, hear my call!";
+        }
       }
+      checkedArrays.push(checkedArray);
     }
-    return mySudokuBoard;
+    console.log(checkedArrays)
+    return checkedArrays;
+  }
+
+  sudokufy() {
+
   }
 }

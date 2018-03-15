@@ -8,7 +8,8 @@
     "start": "webpack-dev-server --open",
     "test": "karma start karma.conf.js",
     "lint": "eslint ./*.js",
-    "lintfix": "eslint --fix ./*.js"
+    "lintfix": "eslint --fix ./*.js",
+    "standardfix": "standard ./*.js --fix"
   },
   "keywords": [],
   "author": "",
@@ -25,20 +26,21 @@
     "jasmine": "^3.1.0",
     "jasmine-core": "^2.99.0",
     "jasmine-expect": "^3.8.3",
+    "jasmine-matchers": "*",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-jasmine-matchers": "",
+    "karma-jasmine-matchers": "*",
     "karma-jquery": "^0.2.2",
     "karma-webpack": "^2.0.13",
+    "standard": "*",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.0",
-    "jasmine-matchers": ""
+    "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",

@@ -1,6 +1,6 @@
-const webpackConfig = require('./webpack.config.js');
+const webpackConfig = require('./webpack.config.js')
 
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jquery-3.2.1', 'jasmine', 'jasmine-matchers'],
@@ -32,5 +32,5 @@ module.exports = function(config) {
     browsers: ['Chrome'],
     singleRun: false,
     concurrency: Infinity
-  });
-};
+  })
+}
